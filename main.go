@@ -5,6 +5,8 @@ import (
 )
 
 func main() {
-	fp := NewFunctionPool().Register("upper", upper)
+	fp := NewFunctionPool()
+	fp.Register("upper", upper)
+	fp.Register("reverse", reverse)
 	fp.Run(os.Getenv("FUNCTION"))
 }
