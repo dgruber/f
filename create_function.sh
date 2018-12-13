@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -x 
 if [ "$1x" = "x" ]; then
    echo "args: upper / reverse"
    exit 1
