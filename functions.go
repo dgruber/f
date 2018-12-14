@@ -1,11 +1,15 @@
 package main
 
 import (
+	"fmt"
+	"os"
 	"strings"
 )
 
 func upper(in string) string {
-	return strings.ToUpper(in)
+	out := strings.ToUpper(in)
+	fmt.Fprintln(os.Stdout, out)
+	return out
 }
 
 func reverse(in string) string {
@@ -18,5 +22,6 @@ func reverse(in string) string {
 	for i := 0; i < s/2; i++ {
 		rune[i], rune[s-1-i] = rune[s-1-i], rune[i]
 	}
+	fmt.Fprintln(os.Stderr, string(rune))
 	return string(rune)
 }
